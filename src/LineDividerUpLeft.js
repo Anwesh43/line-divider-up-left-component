@@ -3,7 +3,7 @@ import {
   useStyle, 
   useAnimatedScale, 
   useDimension 
-} from 'react'
+} from './hooks'
 
 const Line = ({i, lineStyle}) => {
     return (
@@ -24,7 +24,7 @@ const LineDividerUpLeftContainer = (props) => {
     const {scale, start} = useAnimatedScale(0.02, 20)
     const {w, h} = useDimension()
     return <div>
-        <LineDividerUpLeft scale = {scale} w = {w} h = {h} onClick = {onClick}/>
+        <LineDividerUpLeft scale = {scale} w = {w} h = {h} onClick = {start}/>
     </div>
 }
 
